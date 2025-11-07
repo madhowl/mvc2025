@@ -1,0 +1,11 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    {% for article in articles %}
+        <div >
+                <h5 class="title"><a href="/article/{{ article.title }}">{{ article.title }}</a></h5>
+                <p>{{ article.content }}</p>
+        </div>
+        <!-- End Blog List Single Item -->
+    {% endfor %}
+{% endblock %}
