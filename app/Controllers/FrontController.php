@@ -11,18 +11,18 @@ use Psr\Http\Message\ServerRequestInterface;
 class FrontController
 {
     private Article $article_model;
-    private FrontView $view;
+    private FrontView $front_view;
 
-    public function __construct( Article $Article, FrontView $View)
+    public function __construct( Article $article, FrontView $frontview)
     {
-        $this->article_model = $Article;
-        $this->view = $View;
+        $this->article_model = $article;
+        $this->front_view = $frontview;
 
     }
 
     public function responseWrapper(string $str):ResponseInterface
     {
-        $response = new Response;
+        $response = new Response();
         $response->getBody()->write($str);
         return $response;
 
@@ -30,7 +30,7 @@ class FrontController
     public function index(ServerRequestInterface $request): ResponseInterface
     {
         $articles = $this->article_model->all();
-        $html = $this->view->articleList($articles);
+        $html = $this->front_view->articleList($articles);
         return $this->responseWrapper($html);
     }
 }
