@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Interfaces\PostRepositoryInterface;
 use App\Models\Article;
 use App\Views\FrontView;
 use Laminas\Diactoros\Response;
@@ -10,14 +11,13 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class FrontController
 {
-    private Article $article_model;
+    private PostRepositoryInterface $postRepository;
     private FrontView $front_view;
 
-    public function __construct( Article $article, FrontView $frontview)
+    public function __construct( PostRepositoryInterface $repository, FrontView $frontview)
     {
-        $this->article_model = $article;
+        $this->postRepository = $repository;
         $this->front_view = $frontview;
-
     }
 
     public function responseWrapper(string $str):ResponseInterface
@@ -29,8 +29,22 @@ class FrontController
     }
     public function index(ServerRequestInterface $request): ResponseInterface
     {
-        $articles = $this->article_model->all();
-        $html = $this->front_view->articleList($articles);
+        $posts = $this->postRepository->all();
+        $html = $this->front_view->articleList($posts);
         return $this->responseWrapper($html);
     }
+
+    public function show(ServerRequestInterface $request, array $args): ResponseInterface
+    {
+        $id = (int)$args['id'];
+        $post = $this->postRepository->find($id);
+        //var_dump($post);exit();
+        if (!$post) {
+            return $this->responseWrapper('Post not found');
+        }
+        $html = $this->front_view->article($post);
+        //var_dump($html);exit();
+        return $this->responseWrapper($html);
+    }
+
 }

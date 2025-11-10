@@ -1,0 +1,12 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+        <div >
+                <h5 class="title"><a href="/article/{{ post.title }}">{{ post.title }}</a></h5>
+                <p>{{ post.content }}</p>
+        </div>
+        <!-- End Blog List Single Item -->
+        <a href="/">домой</a>
+
+{% endblock %}
