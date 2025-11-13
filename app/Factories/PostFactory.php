@@ -4,9 +4,11 @@ namespace App\Factories;
 
 use App\Interfaces\PostFactoryInterface;
 use App\Models\Post;
+use Michelf\MarkdownExtra;
 
 class PostFactory implements PostFactoryInterface
 {
+
 
     public function create(array $data): Post
     {
@@ -15,7 +17,7 @@ class PostFactory implements PostFactoryInterface
             (string)($data['title']),
             (string)($data['description']),
             (string)($data['cover_image']),
-            (string)($data['content']),
+            (string)(MarkdownExtra::defaultTransform($data['content'])),
             (string)($data['category'] ?? ''),
             (string)($data['filename'] ?? '')
         );
