@@ -7,6 +7,7 @@ use App\Models\Post;
 
 class PostFactory implements PostFactoryInterface
 {
+
     public function create(array $data): Post
     {
         return new Post(

@@ -1,12 +1,18 @@
 <?php
-require '../vendor/autoload.php';
 
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
+
+require '../vendor/autoload.php';
+ 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-$whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops = new Run;
+$whoops->pushHandler(new PrettyPageHandler);
 $whoops->register();
+
+
 
 require_once '../config/settings.php';
 
@@ -17,7 +23,7 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 );
 
 $router->map('GET', '/', 'App\Controllers\FrontController::index');
-$router->get('/post/{id}', 'App\Controllers\FrontController::show');
+$router->get('/post/{id}', 'App\Controllers\FrontController::showPost');
 
 
 $response = $router->dispatch($request);

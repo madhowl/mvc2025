@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Начало карьеры в программировании",
     "description": "С чего начать изучение программирования и какие языки выбрать.",
-    "cover_image": "https://example.com/images/programming_start.jpg",
+    "cover_image": "/images/image1.png",
     "content": "Программирование — это не просто код, а способ мышления. Начните с Python — он прост, читаем и мощен. Пишите маленькие проекты: калькулятор, список дел, парсер погоды. Не бойтесь ошибок — они ваш лучший учитель. Заведите [GitHub](https://github.com), публикуйте код. Участвуйте в open-source — даже исправление опечатки в документации ценно. Через 3 месяца вы уже будете решать задачи, которые раньше казались непреодолимыми.\n\n![Пример кода на Python](https://example.com/images/python_snippet.png)\n\nРекомендую курс [freeCodeCamp](https://freecodecamp.org) — он бесплатный и очень качественный.",
     "category": "Образование",
     "filename": "post1.html"
@@ -12,7 +12,7 @@
     "id": 2,
     "title": "Как правильно питаться",
     "description": "Полезные советы по сбалансированному питанию.",
-    "cover_image": "https://example.com/images/healthy_eating.jpg",
+    "cover_image": "/images/image2.png",
     "content": "Правильное питание — это не диета, а образ жизни. Ешьте больше овощей, фруктов, бобовых и цельнозерновых. Ограничьте сахар и переработанные продукты. Пейте воду — не менее 1,5 л в день. Не пропускайте завтрак: он запускает метаболизм.\n\n![Тарелка здорового питания](https://example.com/images/healthy_plate.jpg)\n\nИзучите принцип [MyPlate](https://www.myplate.gov) от USDA. Попробуйте готовить дома хотя бы 4 раза в неделю — это сэкономит деньги и улучшит здоровье. Не забывайте про сон и стресс — они влияют на аппетит не меньше, чем еда.",
     "category": "Здоровье",
     "filename": "post2.html"
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Путешествия по Европе на бюджете",
     "description": "Как сэкономить во время путешествия по Европе.",
-    "cover_image": "https://example.com/images/europe_budget.jpg",
+    "cover_image": "/images/image3.png",
     "content": "Европа не обязана быть дорогой. Летайте на рейсы бюджетных авиакомпаний (Ryanair, Wizz Air), но проверяйте аэропорты — часто они далеко от города. Живите в хостелах или через [Airbnb](https://airbnb.com) — с кухней можно готовить. Передвигайтесь на автобусах: [FlixBus](https://flixbus.com) — дешевле поездов. Бесплатные музеи — в понедельник в Париже, в Берлине — каждый день.\n\n![Европейский хостел](https://example.com/images/european_hostel.jpg)\n\nСовет: купите [Eurail Pass](https://www.eurail.com) только если едете в 5+ стран за 2 недели. Иначе — билеты по отдельности.",
     "category": "Путешествия",
     "filename": "post3.html"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Тренды веб-дизайна 2026",
     "description": "Какие тенденции будут популярны в следующем году.",
-    "cover_image": "https://example.com/images/web_design_trends.jpg",
+    "cover_image": "/images/image4.png",
     "content": "2026 принесёт минимализм с эмоциональным акцентом. Глубокие тени, плавные анимации и ассиметричные сетки — норма. Особое внимание — доступности: контраст, масштабируемость, клавиатурная навигация. Шрифты — ручной рисунок (handwritten) и геометрические sans-serif.\n\n![Дизайн 2026](https://example.com/images/web_trend_2026.png)\n\nВажно: AI-генерация контента уже не роскошь, а стандарт. Но пользователи ценят **человечность** — добавляйте реальные истории, видео с командой, отзывы клиентов. Читайте [Smashing Magazine](https://smashingmagazine.com) для глубокого погружения.",
     "category": "Дизайн",
     "filename": "post4.html"
@@ -39,7 +39,7 @@
     "id": 5,
     "title": "Изучение JavaScript с нуля",
     "description": "Пошаговое руководство для новичков.",
-    "cover_image": "https://example.com/images/js_zero_to_hero.jpg",
+    "cover_image": "/images/image5.png",
     "content": "JavaScript — язык веба. Начните с переменных, условий и циклов. Потом — функции и массивы. Практикуйтесь на [freeCodeCamp](https://freecodecamp.org) или [JavaScript.info](https://javascript.info). Создайте простой калькулятор, потом — приложение для заметок. Не торопитесь с фреймворками — сначала поймите DOM.\n\n![JS в браузере](https://example.com/images/js_dom.png)\n\nКогда освоите основы — попробуйте [Node.js](https://nodejs.org) для сервера. Не бойтесь ошибок: `console.log()` — ваш лучший друг. Через 6 месяцев вы сможете создать полноценное SPA-приложение.",
     "category": "Программирование",
     "filename": "post5.html"
@@ -48,7 +48,7 @@
     "id": 6,
     "title": "Как улучшить продуктивность",
     "description": "Методы и инструменты для повышения эффективности.",
-    "cover_image": "https://example.com/images/productivity.jpg",
+    "cover_image": "/images/image6.png",
     "content": "Продуктивность — не про больше часов, а про умные решения. Используйте технику Помодоро: 25 минут работы, 5 минут отдыха. Планируйте день вечером — 3 главные задачи на завтра. Удаляйте уведомления — они убивают концентрацию.\n\n![Помодоро-таймер](https://example.com/images/pomodoro_timer.jpg)\n\nИнструменты: [Notion](https://notion.so) для задач, [Focus To-Do](https://focustodo.cn) для таймеров. Важно: спите 7+ часов. Усталый мозг не создаёт, а только потребляет. Читайте книгу [Atomic Habits](https://jamesclear.com/atomic-habits) — она меняет жизнь.",
     "category": "Саморазвитие",
     "filename": "post6.html"
@@ -57,7 +57,7 @@
     "id": 7,
     "title": "Лучшие книги по психологии",
     "description": "Топ-5 книг, которые изменят ваше мышление.",
-    "cover_image": "https://example.com/images/psychology_books.jpg",
+    "cover_image": "/images/image7.png",
     "content": "Психология помогает понять себя и других. Обязательно прочтите: \n- *«Мыслить быстро и медленно»* Даниэля Канемана — о когнитивных искажениях.\n- *«Власть привычки»* Чарльза Духигга — как формируются действия.\n- *«Эмоциональный интеллект»* Дэниела Гоулмана — почему EQ важнее IQ.\n\n![Обложки книг](https://example.com/images/psychology_books_cover.jpg)\n\nДополнительно: *«Психология влияния»* Роберта Чалдини — как люди убеждаются. Эти книги не просто читаются — они меняют вашу реальность.",
     "category": "Образование",
     "filename": "post7.html"
@@ -66,7 +66,7 @@
     "id": 8,
     "title": "Как начать свой бизнес",
     "description": "Шаги для запуска успешного стартапа.",
-    "cover_image": "https://example.com/images/startup_guide.jpg",
+    "cover_image": "/images/image8.png",
     "content": "Не начинайте с идеи — начните с проблемы. Найдите 10 человек, кто страдает от неё. Предложите им решение — даже вручную. Если они заплатят — у вас бизнес. Используйте [Lean Startup](https://theleanstartup.com) методологию: стройте → измеряйте → учите.\n\n![Бизнес-модель](https://example.com/images/lean_startup_canvas.png)\n\nНе тратите деньги на сайт до MVP. Начните с Telegram-бота или Google Forms. Первые 10 клиентов — ваша лучшая маркетинговая кампания. Читайте [The Mom Test](https://www.themomtest.com) — как правильно спрашивать людей.",
     "category": "Бизнес",
     "filename": "post8.html"
@@ -75,7 +75,7 @@
     "id": 9,
     "title": "Экологичный образ жизни",
     "description": "Простые шаги к устойчивому образу жизни.",
-    "cover_image": "https://example.com/images/green_living.jpg",
+    "cover_image": "/images/image9.png",
     "content": "Экология — не про идеалы, а про действия. Замените одноразовые пакеты на тканевые. Пейте из термоса — не покупайте бутылки. Откажитесь от быстрой моды: купите 5 качественных вещей, а не 20 дешёвых. Следите за [Good On You](https://goodonyou.eco) — приложение о этичных брендах.\n\n![Эко-жизнь](https://example.com/images/eco_living.jpg)\n\nСократите мясо: даже 2 дня в неделю снижают ваш углеродный след на 20%. Добавьте растения в дом — они очищают воздух. Каждое маленькое действие имеет значение.",
     "category": "Экология",
     "filename": "post9.html"
@@ -84,7 +84,7 @@
     "id": 10,
     "title": "Искусственный интеллект в повседневной жизни",
     "description": "Как ИИ влияет на нашу жизнь сегодня.",
-    "cover_image": "https://example.com/images/ai_everyday.jpg",
+    "cover_image": "/images/image10.png",
     "content": "ИИ уже здесь: он пишет письма, редактирует фото, помогает в медицине и даже учит языку. Используйте [ChatGPT](https://chat.openai.com) для переписки, [Canva AI](https://canva.com) для дизайна, [Otter.ai](https://otter.ai) для транскрипции встреч. Но не полагайтесь на него полностью — проверяйте факты.\n\n![ИИ в работе](https://example.com/images/ai_in_work.jpg)\n\nВажно: ИИ не заменяет человека — он усиливает его. Учитесь работать с ним: формулируйте чёткие промпты, задавайте уточняющие вопросы. Это новый навык 21 века — как умение печатать.",
     "category": "Технологии",
     "filename": "post10.html"
@@ -93,7 +93,7 @@
     "id": 11,
     "title": "Финансовая грамотность для начинающих",
     "description": "Основы управления личными финансами.",
-    "cover_image": "https://example.com/images/financial_literacy.jpg",
+    "cover_image": "/images/image11.png",
     "content": "Финансовая грамотность — это не про богатство, а про безопасность. Начните с трёх правил: 1) Пишите бюджет — даже в тетради. 2) Откладывайте 10% зарплаты — даже если это 500₽. 3) Не берите кредиты без цели.\n\n![Бюджет в Excel](https://example.com/images/budget_spreadsheet.png)\n\nИспользуйте [Money Lover](https://moneylover.me) или [YNAB](https://www.youneedabudget.com). Учите простые термины: проценты, инфляция, диверсификация. Книга [«Богатый папа, бедный папа»](https://www.robertkiosaki.com) — отличный старт. Деньги — это инструмент, а не цель.",
     "category": "Финансы",
     "filename": "post11.html"
@@ -102,7 +102,7 @@
     "id": 12,
     "title": "Как работать из дома эффективно",
     "description": "Советы для удалённой работы без потерь в продуктивности.",
-    "cover_image": "https://example.com/images/remote_work.jpg",
+    "cover_image": "/images/image12.png",
     "content": "Удалёнка — свобода, но и ловушка. Создайте рабочее пространство — даже если это угол стола. Включайте режим «не беспокоить» в мессенджерах. Соблюдайте ритуалы: утро — кофе, начало работы — список задач, вечер — прощание с компьютером.\n\n![Рабочий угол](https://example.com/images/remote_desk.jpg)\n\nИспользуйте [Toggl Track](https://toggl.com) для отслеживания времени. Общайтесь с командой — не только по делу. Проводите еженедельные видеочаты. Не забывайте про прогулки — они восстанавливают фокус. Работайте не 10 часов — работайте **с фокусом** 5 часов.",
     "category": "Работа",
     "filename": "post12.html"
@@ -111,7 +111,7 @@
     "id": 13,
     "title": "Польза медитации и осознанности",
     "description": "Как медитация может улучшить ваше здоровье.",
-    "cover_image": "https://example.com/images/meditation.jpg",
+    "cover_image": "/images/image13.png",
     "content": "Медитация — это не про пустоту ума, а про внимание. Начните с 5 минут в день: сядьте, закройте глаза, следите за дыханием. Когда мысли приходят — не гоните их, просто замечайте и возвращайтесь к дыханию.\n\n![Медитация](https://example.com/images/meditation_posture.jpg)\n\nИспользуйте приложения [Headspace](https://www.headspace.com) или [Insight Timer](https://insighttimer.com). Через 3 недели вы заметите: меньше тревожности, лучше сон, яснее мысли. Это не магия — это тренировка мозга. Как спорт для ума.",
     "category": "Здоровье",
     "filename": "post13.html"
@@ -120,7 +120,7 @@
     "id": 14,
     "title": "Криптовалюты: что это и как работают",
     "description": "Простое объяснение сложной темы.",
-    "cover_image": "https://example.com/images/cryptocurrency.jpg",
+    "cover_image": "/images/image14.png",
     "content": "Криптовалюты — это цифровые деньги, работающие без банков. Биткоин — первая и самая известная. Технология под ней — блокчейн: публичная, неизменяемая запись всех транзакций.\n\n![Блокчейн](https://example.com/images/blockchain_diagram.png)\n\nНе инвестируйте, пока не поймёте: [Coinbase](https://coinbase.com) — для новичков, [Etherscan](https://etherscan.io) — для проверки транзакций. Храните деньги в кошельке (например, [MetaMask](https://metamask.io)), а не на бирже. Будьте осторожны: мошенники активны. Учите, а не гонитесь за прибылью.",
     "category": "Финансы",
     "filename": "post14.html"
@@ -129,7 +129,7 @@
     "id": 15,
     "title": "Лучшие места для удалённой работы",
     "description": "Где работать, отдыхая вдали от дома.",
-    "cover_image": "https://example.com/images/digital_nomad.jpg",
+    "cover_image": "/images/image15.png",
     "content": "Цифровые кочевники выбирают города с хорошим Wi-Fi, дружелюбными кофейнями и низкой стоимостью жизни. Топ-3: \n- Бали (Индонезия) — природа и атмосфера\n- Прага (Чехия) — Европа + доступность\n- Тбилиси (Грузия) — дешево, красиво, гостеприимно\n\n![Цифровой кочевник](https://example.com/images/digital_nomad_city.jpg)\n\nИспользуйте [Nomad List](https://nomadlist.com) — там рейтинг городов по ценам, скорости интернета и безопасности. Важно: получите визу для длительного пребывания — например, [Portugal D7](https://portugalmadeeasy.com/d7-visa). Работайте с разумом, а не с эмоциями.",
     "category": "Путешествия",
     "filename": "post15.html"
@@ -138,7 +138,7 @@
     "id": 16,
     "title": "Современные фреймворки для веб-разработки",
     "description": "Vue, React, Angular и другие.",
-    "cover_image": "https://example.com/images/web_frameworks.jpg",
+    "cover_image": "/images/image16.png",
     "content": "Выбор фреймворка зависит от задачи. React — гибкий, с огромным сообществом. Vue — проще для новичков. Angular — мощный, но тяжёлый. Для старта — React + Vite. Учитесь не на фреймворке, а на концепциях: компоненты, состояние, пропсы.\n\n![React vs Vue](https://example.com/images/framework_comparison.png)\n\nПочитайте официальные туториалы: [React Docs](https://react.dev), [Vue Guide](https://vuejs.org/guide). Не пытайтесь выучить всё сразу — выберите один, сделайте проект, потом переходите. Фреймворки меняются — навыки остаются.",
     "category": "Программирование",
     "filename": "post16.html"
@@ -147,7 +147,7 @@
     "id": 17,
     "title": "Как писать чистый код",
     "description": "Принципы написания кода, который легко читать и поддерживать.",
-    "cover_image": "https://example.com/images/clean_code.jpg",
+    "cover_image": "/images/image17.png",
     "content": "Чистый код — это когда коллега понимает его за 10 секунд. Именуйте переменные осмысленно: `userEmail` вместо `ue`. Не пишите комментарии — пишите понятный код. Функции должны делать **одно** дело. Не дублируйте код — выносите в функции.\n\n![Чистый код](https://example.com/images/clean_code_example.png)\n\nЧитайте книгу [«Чистый код» Роберта Мартина](https://www.oreilly.com/library/view/clean-code/9780132350884/). Используйте линтеры (ESLint, Prettier). Рефакторинг — не роскошь, а ежедневная практика. Код — это история, которую вы пишете для будущего себя.",
     "category": "Программирование",
     "filename": "post17.html"
@@ -156,7 +156,7 @@
     "id": 18,
     "title": "Создание мобильного приложения с нуля",
     "description": "Шаги от идеи до публикации.",
-    "cover_image": "https://example.com/images/mobile_app.jpg",
+    "cover_image": "/images/image18.png",
     "content": "Начните с идеи, которая решает конкретную проблему. Не «приложение для всего» — а «для того, кто забывает пить воду». Создайте прототип в Figma. Затем — React Native или Flutter для кросс-платформенности. Публикуйте сначала в TestFlight (iOS) и Google Play Beta.\n\n![Мобильное приложение](https://example.com/images/mobile_app_flow.png)\n\nИзучите [Firebase](https://firebase.google.com) для аутентификации и базы данных. Следите за [App Store Guidelines](https://developer.apple.com/app-store/review/guidelines/) и [Material Design](https://m3.material.io). Публикация — не конец, а начало. Собирайте обратную связь — и улучшайте.",
     "category": "Программирование",
     "filename": "post18.html"
@@ -165,7 +165,7 @@
     "id": 19,
     "title": "Психология общения и влияния",
     "description": "Как улучшить навыки общения и убеждения.",
-    "cover_image": "https://example.com/images/communication_psychology.jpg",
+    "cover_image": "/images/image19.png",
     "content": "Люди не любят быть убеждаемыми — они хотят быть понятыми. Слушайте активно: кивайте, перефразируйте, задавайте вопросы. Не перебивайте. Используйте технику «я-высказываний»: «Я чувствую… когда… потому что…»\n\n![Общение](https://example.com/images/active_listening.jpg)\n\nКнига [«Как перестать беспокоиться и начать жить»](https://www.dalecarnegie.com/how-to-stop-worrying/) Дейла Карнеги — обязательна. Применяйте её в ежедневных разговорах. Влияние — это не манипуляция, а искренняя эмпатия.",
     "category": "Психология",
     "filename": "post19.html"
@@ -174,7 +174,7 @@
     "id": 20,
     "title": "Советы по подготовке к собеседованию",
     "description": "Как произвести впечатление и получить работу мечты.",
-    "cover_image": "https://example.com/images/interview_tips.jpg",
+    "cover_image": "/images/image20.png",
     "content": "Собеседование — это не экзамен, а диалог. Подготовьте 3 истории: о трудностях, успехах и ошибках. Используйте STAR: Ситуация — Задача — Действие — Результат. Задайте вопросы: «Как вы измеряете успех в этой роли?»\n\n![Собеседование](https://example.com/images/interview_preparation.jpg)\n\nИзучите компанию: посмотрите их блог, вакансии, LinkedIn. Наденьте то, что чувствуете как «профессионально» — не «дорого». После — отправьте благодарственное письмо. Даже если не получите — вы выиграли опыт. Удачи — вы уже на пути!",
     "category": "Работа",
     "filename": "post20.html"
