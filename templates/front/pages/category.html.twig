@@ -1,0 +1,30 @@
+{% block content %}
+    <div class="box-list-posts mt-30">
+        {% for post as posts %}
+        {% include ("/front/blocks/card_left_image.html.twig") %}
+
+        <div class="card-list-posts wow animate__animated animate__fadeIn">
+            <div class="card-image hover-up"><a href="#"><img src="assets/imgs/page/healthy/img.png" alt="Genz"></a></div>
+            <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="blog-archive.html">Working Tips</a><a href="#">
+                    <h4 class="mt-15 mb-20 color-white">Helpful Tips for Working from Home as a Freelancer</h4></a>
+                <p class="color-gray-500">Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far</p>
+                <div class="row mt-20">
+                    <div class="col-7"><a class="color-gray-700 text-sm mr-15" href="blog-archive.html"># Travel</a><a class="color-gray-700 text-sm" href="blog-archive.html"># Lifestyle</a></div>
+                    <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 mins read</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="card-list-posts wow animate__animated animate__fadeIn">
+            <div class="card-image hover-up"><a href="#"><img src="assets/imgs/page/healthy/img2.png" alt="Genz"></a></div>
+            <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="blog-archive.html">Development</a><a href="#">
+                    <h4 class="mt-15 mb-20 color-white">10 Easy Ways to Be Environmentally Conscious At Home</h4></a>
+                <p class="color-gray-500">Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far</p>
+                <div class="row mt-20">
+                    <div class="col-7"><a class="color-gray-700 text-sm mr-15" href="blog-archive.html"># Travel</a><a class="color-gray-700 text-sm" href="blog-archive.html"># Lifestyle</a></div>
+                    <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 mins read</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
