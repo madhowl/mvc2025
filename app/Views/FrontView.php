@@ -18,4 +18,8 @@ class FrontView
     {
         return $this->twig->render('articles-list.twig',['articles' => $articles]);
     }
+    public function article($post): string
+    {
+        return $this->twig->render('article.twig',['post' => $post]);
+    }
 }

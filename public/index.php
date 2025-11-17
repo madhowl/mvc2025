@@ -10,13 +10,14 @@ $whoops->register();
 
 require_once '../config/settings.php';
 
-$router   = require ('../app/bootstrap.php');
+$router   = require (ROOT_PATH.'/app/bootstrap.php');
 
 $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
     $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES
 );
 
 $router->map('GET', '/', 'App\Controllers\FrontController::index');
+$router->get('/post/{id}', 'App\Controllers\FrontController::show');
 
 
 $response = $router->dispatch($request);
