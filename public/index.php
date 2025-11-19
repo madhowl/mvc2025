@@ -12,11 +12,15 @@ $whoops = new Run;
 $whoops->pushHandler(new PrettyPageHandler);
 $whoops->register();
 
-
+// Загружаем переменные окружения из .env файла
+$dotenv = Dotenv::createImmutable(dirname(__DIR__)); // dirname(__DIR__) указывает на корень проекта
+$dotenv->load();
 
 require_once '../config/settings.php';
 
 $router   = require (ROOT_PATH.'/app/bootstrap.php');
+
+
 
 $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
     $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES
@@ -24,6 +28,8 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 
 $router->map('GET', '/', 'App\Controllers\FrontController::index');
 $router->get('/post/{id}', 'App\Controllers\FrontController::showPost');
+
+#$router->get('/login', 'App\Controllers\AuthController::login');
 
 $router->map('GET', '/admin', 'App\Controllers\AdminController::index');
 
