@@ -1,0 +1,12 @@
+{% extends "/front/layout.html.twig" %}
+{% block content %}
+    <div class="box-list-posts mt-30">
+        {% for post in posts %}
+        {% include ("/front/blocks/card_left_image.html.twig") %}
+        {% endfor %}
+        {% include ("/front/blocks/pagination.html.twig")%}
+    </div>
+{% endblock %}
+
+
+

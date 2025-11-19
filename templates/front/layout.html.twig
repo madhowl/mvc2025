@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block header %}
+  {% include( "/front/blocks/header.html.twig") %}
+{% endblock %}
+  <body>
+  {% block preloader %}
+    {% include( "/front/blocks/preloader.html.twig") %}
+  {% endblock %}
+    <header class="header sticky-bar bg-gray-900">
+      <div class="container">
+        {% block main_header %}
+            {% include( "/front/blocks/main_header.html.twig") %}
+        {% endblock %}
+      </div>
+    </header>
+    <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900">
+
+      {% block mobile_header %}
+      {% include( "/front/blocks/mobile_header.html.twig") %}
+      {% endblock %}
+    </div>
+
+    <main class="main">
+      <div class="cover-home3">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-1"></div>
+            <div class="col-xl-10 col-lg-12">
+              {% block page_header_and_breadcrumbs %}
+              {% endblock %}
+              <div class="box-list-posts mt-40">
+                <div class="row">
+                    {% block error %}
+                    {% endblock %}
+                  <div class="col-lg-8">
+                    {% block content %}
+                    {% endblock %}
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="sidebar">
+                        {% block sidebar %}
+                      {% include ("/front/blocks/sidebar/categories.html.twig") %}
+                      {% include ("/front/blocks/sidebar/popular_posts.html.twig") %}
+                        {% endblock %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  {% include ("/front/blocks/footer.html.twig") %}
+
+    <div class="progressCounter progressScroll hover-up hover-neon-2">
+      <div class="progressScroll-border">
+        <div class="progressScroll-circle"><span class="progressScroll-text"><i class="fi-rr-arrow-small-up"></i></span></div>
+      </div>
+    </div>
+  {% block java_script %}
+    <script src="/assets/js/vendors/modernizr-3.6.0.min.js"></script>
+    <script src="/assets/js/vendors/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/vendors/jquery-migrate-3.3.0.min.js"></script>
+    <script src="/assets/js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/vendors/waypoints.js"></script>
+    <script src="/assets/js/vendors/wow.js"></script>
+    <script src="/assets/js/vendors/text-type.js"></script>
+    <script src="/assets/js/vendors/swiper-bundle.min.js"></script>
+    <script src="/assets/js/vendors/jquery.progressScroll.min.js"></script>
+    <script src="/assets/js/main.js?v=2.0"></script>
+  {% endblock %}
+  </body>
+</html>

@@ -5,7 +5,6 @@ use App\Controllers\FrontController;
 use App\Factories\PostFactory;
 use App\Interfaces\PostFactoryInterface;
 use App\Interfaces\PostRepositoryInterface;
-use App\Models\Article;
 use App\Repositories\JsonPostRepository;
 use App\Views\FrontView;
 use League\Route\Router;
