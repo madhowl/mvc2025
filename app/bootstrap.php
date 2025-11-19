@@ -31,8 +31,21 @@ $container->add(AdminView::class)
 // PostFactory
 $container->add(PostFactoryInterface::class, PostFactory::class);
 
-$container->add(PostRepositoryInterface::class, JsonPostRepository::class)
-    ->addArguments([PostFactoryInterface::class]);
+// Выбираем репозиторий в зависимости от переменной STORAGE_TYPE
+$storageType = $_ENV['STORAGE_TYPE'] ?? 'json'; // По умолчанию 'json'
+
+
+if ($storageType === 'file') {
+    $container->add(PostRepositoryInterface::class, FilePostRepository::class)
+        ->addArguments([PostFactoryInterface::class, FileHandler::class]);
+} else {
+    // По умолчанию используем JSON
+    $container->add(PostRepositoryInterface::class, JsonPostRepository::class)
+        ->addArguments([PostFactoryInterface::class]);
+}
+
+//$container->add(PostRepositoryInterface::class, JsonPostRepository::class)
+//    ->addArguments([PostFactoryInterface::class]);
 
 $container->add(AdminController::class)
     ->addArgument($container->get(PostRepositoryInterface::class))
