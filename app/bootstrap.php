@@ -8,6 +8,7 @@ use App\Interfaces\PostFactoryInterface;
 use App\Interfaces\PostRepositoryInterface;
 use App\Repositories\JsonPostRepository;
 use App\Views\AdminView;
+use App\Views\AuthView;
 use App\Views\FrontView;
 use League\Route\Router;
 use League\Route\Strategy\ApplicationStrategy;
@@ -26,6 +27,10 @@ $container->add(Environment::class, function () {
 
 $container->add(FrontView::class)
     ->addArguments([Environment::class]);
+
+$container->add(AuthView::class)
+    ->addArguments([Environment::class]);
+
 $container->add(AdminView::class)
     ->addArguments([Environment::class]);
 // PostFactory
@@ -50,6 +55,9 @@ if ($storageType === 'file') {
 $container->add(AdminController::class)
     ->addArgument($container->get(PostRepositoryInterface::class))
     ->addArgument($container->get(AdminView::class));
+
+$container->add(\App\Controllers\AuthController::class)
+    ->addArgument($container->get(AuthView::class));
 
 $container->add(FrontController::class)
     ->addArgument($container->get(PostRepositoryInterface::class))

@@ -29,7 +29,8 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 $router->map('GET', '/', 'App\Controllers\FrontController::index');
 $router->get('/post/{id}', 'App\Controllers\FrontController::showPost');
 
-#$router->get('/login', 'App\Controllers\AuthController::login');
+$router->get('/login', 'App\Controllers\AuthController::showLoginForm');
+$router->post('/login', 'App\Controllers\AuthController::showLoginForm');
 
 $router->map('GET', '/admin', 'App\Controllers\AdminController::index');
 
