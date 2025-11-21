@@ -1,5 +1,8 @@
 <?php
+declare(strict_types=1);
+session_start();
 
+use Dotenv\Dotenv;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 
@@ -30,7 +33,8 @@ $router->map('GET', '/', 'App\Controllers\FrontController::index');
 $router->get('/post/{id}', 'App\Controllers\FrontController::showPost');
 
 $router->get('/login', 'App\Controllers\AuthController::showLoginForm');
-$router->post('/login', 'App\Controllers\AuthController::showLoginForm');
+$router->post('/login', 'App\Controllers\AuthController::login');
+$router->get('/logout', 'App\Controllers\AuthController::logout');
 
 $router->map('GET', '/admin', 'App\Controllers\AdminController::index');
 
