@@ -25,6 +25,8 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 $router->map('GET', '/', 'App\Controllers\FrontController::index');
 $router->get('/post/{id}', 'App\Controllers\FrontController::showPost');
 
+$router->map('GET', '/admin', 'App\Controllers\AdminController::index');
+
 
 $response = $router->dispatch($request);
 
