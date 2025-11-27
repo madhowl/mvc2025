@@ -2,15 +2,12 @@
 {% block content %}
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Striped rows</h4>
+            <h4 class="card-title">Список постов</h4>
         </div>
         <div class="card-content">
             <div class="card-body">
-                <p class="card-text">Use <code class="highlighter-rouge">.table-striped</code> to add
-                    zebra-striping to any
-                    table row within the <code class="highlighter-rouge">&lt;tbody&gt;</code>. This styling
-                    doesn't work in IE8
-                    and below as <code>:nth-child</code> CSS selector isn't supported.</p>
+                <p class="card-text">Перед вами список всех постов</p>
+                <p class="card-text">Для добавления нового поста нажмите на кнопку <a href="/admin/post/add" class ="btn btn-success"><i class="bi bi-file-plus"></i> Добавить</a></p>
             </div>
             <!-- table striped -->
             <div class="table-responsive">
@@ -18,9 +15,9 @@
                     <thead>
                     <tr>
                         <th>id</th>
-                        <th>Title</th>
-                        <th>Cover</th>
-                        <th>ACTION</th>
+                        <th>Заголовок</th>
+                        <th>Обложка</th>
+                        <th>ДЕЙСТВИЯ</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -44,7 +41,6 @@
                                 <a href="/admin/post/delete/{{ post.id }}" class="btn icon btn-danger" data-bs-toggle="modal" data-bs-target="#danger-{{ post.id }}">
                                     <i class="bi bi-trash"></i>
                                 </a>
-
                                 <!--Danger theme Modal -->
                                 <div class="modal fade text-left" id="danger-{{ post.id }}" tabindex="-1" aria-labelledby="myModalLabel120" style="display: none;" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
@@ -65,7 +61,6 @@
                                                     <span class="d-none d-sm-block">Нет не нужно</span>
                                                 </button>
                                                 <a href="#" onclick="window.location.href = '/admin/post/delete/{{ post.id }}'; return false;" class="btn btn-danger ms-1" data-bs-dismiss="modal">
-
                                                     Удалить
                                                 </a>
                                             </div>

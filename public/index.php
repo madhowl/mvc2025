@@ -2,6 +2,8 @@
 declare(strict_types=1);
 session_start();
 
+
+use App\Middlewares\AuthMiddleware;
 use Dotenv\Dotenv;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
@@ -36,11 +38,16 @@ $router->get('/login', 'App\Controllers\AuthController::showLoginForm');
 $router->post('/login', 'App\Controllers\AuthController::login');
 $router->get('/logout', 'App\Controllers\AuthController::logout');
 
-$router->map('GET', '/admin', 'App\Controllers\AdminController::index');
+$router->group('/admin', function (\League\Route\RouteGroup $route) {
+    $route->get( '/', 'App\Controllers\AdminController::index');
+    $route->get('/posts', 'App\Controllers\AdminController::postsList');
+    $route->get('/post/edit/{id}', 'App\Controllers\AdminController::postEdit');
+    $route->get('/post/delete/{id}', 'App\Controllers\AdminController::index');
+})->middleware(new AuthMiddleware());
+;;
 
-$router->get('/admin/posts', 'App\Controllers\AdminController::postsList');
-$router->get('/admin/post/edit/{id}', 'App\Controllers\AdminController::postEdit');
-$router->get('/admin/post/delete/{id}', 'App\Controllers\AdminController::index');
+
+
 
 $response = $router->dispatch($request);
 
