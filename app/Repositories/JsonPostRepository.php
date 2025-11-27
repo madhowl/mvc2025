@@ -17,21 +17,16 @@ class JsonPostRepository implements PostRepositoryInterface
         $this->file = $file;
     }
 
-    private function read(): array
-    {
-        $data = file_get_contents($this->file);
-        return json_decode($data, true) ?: [];
-    }
-
-    private function write(array $data): void
-    {
-        file_put_contents($this->file, json_encode($data, JSON_PRETTY_PRINT));
-    }
-
     public function all(): array
     {
         $posts = $this->read();
         return array_map([$this->factory, 'create'], $posts);
+    }
+
+    private function read(): array
+    {
+        $data = file_get_contents($this->file);
+        return json_decode($data, true) ?: [];
     }
 
     public function find(int $id): ?Post
@@ -54,6 +49,11 @@ class JsonPostRepository implements PostRepositoryInterface
         $this->write($posts);
         $newPost['filename'] = 'post_' . $id;
         return $this->factory->create($newPost);
+    }
+
+    private function write(array $data): void
+    {
+        file_put_contents($this->file, json_encode($data, JSON_PRETTY_PRINT));
     }
 
     public function update(int $id, array $data): ?Post

@@ -8,11 +8,13 @@ use App\Interfaces\PostFactoryInterface;
 use App\Interfaces\PostRepositoryInterface;
 use App\Repositories\JsonPostRepository;
 use App\Views\AdminView;
+use App\Views\AuthView;
 use App\Views\FrontView;
 use League\Route\Router;
 use League\Route\Strategy\ApplicationStrategy;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
+
 
 
 $container = new League\Container\Container();
@@ -25,17 +27,37 @@ $container->add(Environment::class, function () {
 
 $container->add(FrontView::class)
     ->addArguments([Environment::class]);
+
+$container->add(AuthView::class)
+    ->addArguments([Environment::class]);
+
 $container->add(AdminView::class)
     ->addArguments([Environment::class]);
 // PostFactory
 $container->add(PostFactoryInterface::class, PostFactory::class);
 
-$container->add(PostRepositoryInterface::class, JsonPostRepository::class)
-    ->addArguments([PostFactoryInterface::class]);
+// Выбираем репозиторий в зависимости от переменной STORAGE_TYPE
+$storageType = $_ENV['STORAGE_TYPE'] ?? 'json'; // По умолчанию 'json'
+
+
+if ($storageType === 'file') {
+    $container->add(PostRepositoryInterface::class, FilePostRepository::class)
+        ->addArguments([PostFactoryInterface::class, FileHandler::class]);
+} else {
+    // По умолчанию используем JSON
+    $container->add(PostRepositoryInterface::class, JsonPostRepository::class)
+        ->addArguments([PostFactoryInterface::class]);
+}
+
+//$container->add(PostRepositoryInterface::class, JsonPostRepository::class)
+//    ->addArguments([PostFactoryInterface::class]);
 
 $container->add(AdminController::class)
     ->addArgument($container->get(PostRepositoryInterface::class))
     ->addArgument($container->get(AdminView::class));
+
+$container->add(\App\Controllers\AuthController::class)
+    ->addArgument($container->get(AuthView::class));
 
 $container->add(FrontController::class)
     ->addArgument($container->get(PostRepositoryInterface::class))
