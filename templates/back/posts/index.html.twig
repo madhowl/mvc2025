@@ -1,0 +1,83 @@
+{% extends "/back/layout.html.twig" %}
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Striped rows</h4>
+        </div>
+        <div class="card-content">
+            <div class="card-body">
+                <p class="card-text">Use <code class="highlighter-rouge">.table-striped</code> to add
+                    zebra-striping to any
+                    table row within the <code class="highlighter-rouge">&lt;tbody&gt;</code>. This styling
+                    doesn't work in IE8
+                    and below as <code>:nth-child</code> CSS selector isn't supported.</p>
+            </div>
+            <!-- table striped -->
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Title</th>
+                        <th>Cover</th>
+                        <th>ACTION</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for post in posts %}
+                    <tr>
+                        <td class="text-bold-500">{{ post.id }}</td>
+                        <td>{{ post.title }}</td>
+                        <td >
+                            <div class="pr-50">
+                                <div class="avatar avatar-3xl">
+                                    <img src="{{ post.cover_image }}" alt="Avatar">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="/admin/post/edit/{{ post.id }}" class="btn icon btn-primary">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            <div class="modal-danger me-1 mb-1 d-inline-block">
+                                <!-- Button trigger for danger theme modal -->
+                                <a href="/admin/post/delete/{{ post.id }}" class="btn icon btn-danger" data-bs-toggle="modal" data-bs-target="#danger-{{ post.id }}">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+
+                                <!--Danger theme Modal -->
+                                <div class="modal fade text-left" id="danger-{{ post.id }}" tabindex="-1" aria-labelledby="myModalLabel120" style="display: none;" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-danger">
+                                                <h5 class="modal-title white" id="myModalLabel120">Внимание 
+                                                </h5>
+                                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Вы действительно хотите удалить пост ID# {{ post.id }} ?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                                    <i class="bx bx-x d-block d-sm-none"></i>
+                                                    <span class="d-none d-sm-block">Нет не нужно</span>
+                                                </button>
+                                                <a href="#" onclick="window.location.href = '/admin/post/delete/{{ post.id }}'; return false;" class="btn btn-danger ms-1" data-bs-dismiss="modal">
+
+                                                    Удалить
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

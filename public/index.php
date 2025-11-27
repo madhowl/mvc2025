@@ -38,6 +38,9 @@ $router->get('/logout', 'App\Controllers\AuthController::logout');
 
 $router->map('GET', '/admin', 'App\Controllers\AdminController::index');
 
+$router->get('/admin/posts', 'App\Controllers\AdminController::postsList');
+$router->get('/admin/post/edit/{id}', 'App\Controllers\AdminController::postEdit');
+$router->get('/admin/post/delete/{id}', 'App\Controllers\AdminController::index');
 
 $response = $router->dispatch($request);
 

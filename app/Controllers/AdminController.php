@@ -32,4 +32,24 @@ class AdminController
         return $this->responseWrapper($html);
     }
 
+    public function postslist(ServerRequestInterface $request): ResponseInterface
+    {
+        $posts = $this->postRepository->all();
+        //var_dump($posts);exit();
+        $html = $this->adminView->showPosts($posts);
+        return $this->responseWrapper($html);
+    }
+    public function postEdit(ServerRequestInterface $request): ResponseInterface
+    {
+        $id = $request->getAttribute('id');
+        $post = $this->postRepository->find($id);
+        $html = $this->adminView->showForm($post);
+        return $this->responseWrapper($html);
+    }
+    public function postCreate(ServerRequestInterface $request): ResponseInterface
+    {
+        $html = $this->adminView->showForm();
+        return $this->responseWrapper($html);
+    }
+
 }

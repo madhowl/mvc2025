@@ -87,6 +87,7 @@
         </div>
     </div>
     <section class="section">
+        {% block content %}   {% endblock %}
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Default Layout</h4>
@@ -116,9 +117,8 @@
     <script src="/assets/back/static/js/components/dark.js"></script>
     <script src="/assets/back/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     
-    
     <script src="/assets/back/compiled/js/app.js"></script>
-    
+    {% block js %}{%  endblock%}
 
     
 </body>
