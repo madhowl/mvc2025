@@ -6,44 +6,39 @@
     </div>
     <div class="card-content">
         <div class="card-body">
-            <form class="form form-horizontal">
+            <form class="form form-horizontal" method="post" action="#">
                 <div class="form-body">
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="first-name-horizontal">First Name</label>
+                            <label for="title-horizontal">Заголовок</label>
                         </div>
                         <div class="col-md-8 form-group">
-                            <input type="text" id="first-name-horizontal" class="form-control" name="title" placeholder="First Name">
+                            <input type="text" id="title-horizontal" class="form-control" name="title" placeholder="{{ post.title }}">
                         </div>
                         <div class="col-md-4">
-                            <label for="email-horizontal">Email</label>
+                            <label for="description-horizontal">Описание</label>
                         </div>
                         <div class="col-md-8 form-group">
-                            <input type="email" id="email-horizontal" class="form-control" name="email-id" placeholder="Email">
+                            <input type="text" id="description-horizontal" class="form-control" name="description" placeholder="{{ post.description }}">
                         </div>
                         <div class="col-md-4">
-                            <label for="contact-info-horizontal">Mobile</label>
+                            <label for="cover-image-horizontal">Путь для главного изображения:</label>
                         </div>
                         <div class="col-md-8 form-group">
-                            <input type="number" id="contact-info-horizontal" class="form-control" name="contact" placeholder="Mobile">
+                            <input type="text" id="cover-image-horizontal" class="form-control" name="cover_image" placeholder="{{ post.cover_image }}">
                         </div>
-                        <div class="col-md-4">
-                            <label for="password-horizontal">Password</label>
-                        </div>
-                        <div class="col-md-8 form-group">
-                            <input type="password" id="password-horizontal" class="form-control" name="password" placeholder="Password">
-                        </div>
-                        <div class="col-12 col-md-8 offset-md-4 form-group">
-                            <div class="form-check">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="checkbox1" class="form-check-input" checked="">
-                                    <label for="checkbox1">Remember Me</label>
-                                </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label  class="pb-3" for="content-horizontal">Текс публикации</label>
+                                <textarea name="content" id="content" cols="30" rows="10">
+                                    {{ post.content }}
+                                </textarea>
                             </div>
                         </div>
-                        <div class="col-sm-12 d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
-                            <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                        <div class="col-sm-12 d-flex justify-content-around align-content-stretch">
+
+                            <input type="submit" class="btn btn-success me-1 mb-1" name="post_ok" value="Добавить">
+                            <input type="submit" class="btn btn-secondary me-1 mb-1" name="post_cansel" value="Отмена">
                         </div>
                     </div>
                 </div>
@@ -51,4 +46,14 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block js %}
+    <link rel="stylesheet" href="/assets/back/vendor/easymde/easymde.min.css">
+    <script src="/assets/back/vendor/easymde/easymde.min.js"></script>
+    <script>
+        const easymde = new EasyMDE({
+            element: document.getElementById('content'),
+        });
+    </script>
+
 {% endblock %}
